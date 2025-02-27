@@ -3,7 +3,7 @@ resource "aws_alb" "application_load_balancer" {
   internal           = false
   load_balancer_type = "application"
   security_groups    = [aws_security_group.elastic_container_security_group.id]
-  subnets            = [for subnet in aws_subnet.elastic_container_subnets : subnet.id if subnet.tags["Name"] == "elastic_container_subnet_private"]
+  subnets            = [for subnet in aws_subnet.elastic_container_subnets : subnet.id if subnet.tags["Name"] == "elastic_container_subnet_public"]
   tags = {
     Name = "elastic_container_alb"
   }

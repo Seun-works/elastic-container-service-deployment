@@ -41,7 +41,7 @@ resource "aws_autoscaling_group" "ecs_autoscaling_group" {
     id      = aws_launch_template.elastic_launch_template.id
     version = "$Latest"
   }
-  vpc_zone_identifier = [for subnet in aws_subnet.elastic_container_subnets : subnet.id if subnet.tags["Name"] == "elastic_container_subnet_private"]
+  vpc_zone_identifier = [for subnet in aws_subnet.elastic_container_subnets : subnet.id if subnet.tags["Name"] == "elastic_container_subnet_public"]
   tag {
     key                 = "Name"
     value               = true
