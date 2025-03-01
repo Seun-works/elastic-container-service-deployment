@@ -46,6 +46,7 @@ resource "aws_route_table_association" "elastic_container_route_table_associatio
   route_table_id = aws_route_table.public_route_table.id
 }
 
+#Not the most secure security group, but it will do for now
 resource "aws_security_group" "elastic_container_security_group" {
   vpc_id = aws_vpc.elastic_container_vpc.id
 
