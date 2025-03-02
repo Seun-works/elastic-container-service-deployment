@@ -20,6 +20,7 @@ resource "aws_subnet" "elastic_container_subnets" {
   }
 }
 
+# Ensure the internet gateway is deleted last
 resource "aws_internet_gateway" "elastic_container_igw" {
   vpc_id = aws_vpc.elastic_container_vpc.id
 
@@ -27,6 +28,9 @@ resource "aws_internet_gateway" "elastic_container_igw" {
     Name = "elastic_container_igw"
   }
 
+    lifecycle {
+      create_before_destroy = true
+    }
 }
 
 resource "aws_route_table" "public_route_table" {
@@ -58,9 +62,10 @@ resource "aws_security_group" "elastic_container_security_group" {
   }
 
   ingress {
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    self        = false
     cidr_blocks = ["0.0.0.0/0"]
   }
 

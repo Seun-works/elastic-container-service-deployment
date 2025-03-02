@@ -23,10 +23,11 @@ resource "aws_alb_listener" "ecs_alb_listener" {
 }
 
 resource "aws_alb_target_group" "ecs_alb_target_group" {
-  name     = "elastic-container-target-group"
-  port     = 80
-  protocol = "HTTP"
-  vpc_id   = aws_vpc.elastic_container_vpc.id
+  name        = "elastic-container-target-group"
+  port        = 80
+  protocol    = "HTTP"
+  vpc_id      = aws_vpc.elastic_container_vpc.id
+  target_type = "ip"
 
   health_check {
     path     = "/"
