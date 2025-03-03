@@ -64,7 +64,7 @@ resource "aws_iam_role_policy_attachment" "ecs_instance_role_policy_attachment" 
 
 resource "aws_key_pair" "elastic_key_pair" {
   key_name   = "ecslog"
-  public_key = file("~/.ssh/id_ed25519.pub")
+  public_key = var.public_key
 }
 
 resource "aws_autoscaling_group" "ecs_autoscaling_group" {

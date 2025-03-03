@@ -41,3 +41,8 @@ variable "subnets" {
 
   }
 }
+
+variable "public_key" {
+  description = "The public key for the EC2 instances"
+  type        = string
+}

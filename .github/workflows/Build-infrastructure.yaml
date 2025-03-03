@@ -30,5 +30,7 @@ jobs:
               run: terraform init
 
             - name: Terraform Plan
-              run: terraform plan
+              env:
+                SSH_PUBLIC_KEY: ${{ secrets.SSH_PUBLIC_KEY }}
+              run: terraform plan -var "public_key=$SSH_PUBLIC_KEY"
 
