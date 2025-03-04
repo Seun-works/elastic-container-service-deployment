@@ -8,7 +8,7 @@ This project covers the core concepts of platform engineering by adopting multip
 
 - The continuous deployment process was done through the use of Github actions workflows.
 - The Infrastructure as code tool used to create the cloud resources for this application to be hosted was done with Terraform.
-- The application is hosted on a VPC network with multiple subnets. The application is stored as a container, which is hosted within a container cluster across multiple availabilty zones.
+- The application is hosted in a VPC network with multiple subnets. The application runs as a container, which is hosted within a container cluster across multiple availabilty zones.
 - The network is made up of multiple subnets with attached route tables to route to the internet gateway for public subnets.
 - A security group is used to ensure secure access between subnets, while also making use of multiple iAM roles for secure access to other required services.
 - An auto scaling group is used to ensure that the EC2 instance used to serve as the capacity provider for the Elastic Container Cluster is high available and resilient.
