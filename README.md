@@ -16,10 +16,11 @@ This project covers the core concepts of platform engineering by adopting multip
 
 
 ## Major Components and Technologies used
-- Deployment - Github Actions
-- Infrastructure as Code - Terraform
-- Cloud Services - AWS VPC, AWS EC2, AWS S3, AWS ECS, AWS IAM, AWS S3
-- Containerisation - Docker
+- Deployment or CI/CD - Github Actions.
+- Infrastructure as Code - Terraform.
+- Cloud Services - AWS VPC, AWS EC2, AWS S3, AWS ECS, AWS IAM, AWS S3.
+- Networking: subnetting, security groups, application load balancer, route tables. 
+- Containerisation - Docker.
 - Container Orchestration - Elastic Container Service
 
 
