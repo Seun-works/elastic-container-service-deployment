@@ -30,6 +30,8 @@ This project covers the core concepts of platform engineering by adopting multip
 - Spinning up an ECS cluster takes time through the use of terraform.
 - Creating an IAM Role with least privilege permission to allow the GitHub action server to run the terraform commands in the workflow.
 - Utilizing ECS and an auto sclaing group to make container available through the service load balancer.
+- Implementing core networking principles to create a resilient system.
+- Security principles applied for creating least privilege iAM roles and policies.
 
 ### Future additions
 - [ ]  Make better security groups
