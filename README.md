@@ -1,7 +1,7 @@
 # Three Tiered architecture utilizing Elastic Container Service
 This project covers the core concepts of platform engineering by adopting multiple principles to create a highly available and resilient three tier architecture that runs a custom containered NextJS application in an Elastic Container cluster running on EC2 instances.
 
-# Project Visual Diagram and walkthrough
+## Project Visual Diagram and walkthrough
 
 ![Three-tier-architecture drawio](https://github.com/user-attachments/assets/f1d20100-18dd-4411-9b6a-c3bdb0a4d807)
 
