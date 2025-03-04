@@ -33,7 +33,7 @@ This project covers the core concepts of platform engineering by adopting multip
 - Implementing core networking principles to create a resilient system.
 - Security principles applied for creating least privilege iAM roles and policies.
 
-### Future additions
+## Future additions
 - [ ]  Make better security groups
 - [ ]  Put instances in private subnet and divert traffic to nat gateway following this approach: https://www.google.com/search?q=how+to+connect+ec2+instance+to+nat+gateway+in+terraform&rlz=1C5CHFA_enGB996GB997&oq=how+to+connect+ec2+instance+to+nat+gateway+in+terraform+&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORifBTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRigAdIBCDg5MjRqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8 by adding a new route table and diverting the route to `0.0.0.0:0`  with the nat gateway as the `gateway_id`
 - [ ]  Add blue/green deployment by following this: https://developer.hashicorp.com/terraform/tutorials/aws/blue-green-canary-tests-deployments
